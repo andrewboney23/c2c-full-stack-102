@@ -6,11 +6,12 @@ The main course project is an **e-commerce website** backed by a working databas
 
 ## How to use this repo (GitHub Codespaces)
 
-1. Open this repository on GitHub.
-2. Click **Code** → **Codespaces** → **Create codespace on main**.
-3. Wait for the Codespace to finish starting.
-4. In the Codespace, open **Terminal**.
-5. Navigate to today’s lesson directory:
+1. **Fork this repository** into your own GitHub account.
+2. Open **your fork** on GitHub.
+3. Click **Code** → **Codespaces** → **Create codespace on main**.
+4. Wait for the Codespace to finish starting.
+5. In the Codespace, open **Terminal**.
+6. Navigate to today’s lesson directory:
 
    ```bash
    cd /workspaces/c2c-full-stack-102/lesson-<number>
@@ -22,7 +23,7 @@ The main course project is an **e-commerce website** backed by a working databas
    cd /workspaces/c2c-full-stack-102/lesson-01
    ```
 
-6. Open and follow the lesson instructions inside that folder (for example, `lesson-01/README.md`).
+7. Open and follow the lesson instructions inside that folder (for example, `lesson-01/README.md`).
 
 ## Lessons
 
