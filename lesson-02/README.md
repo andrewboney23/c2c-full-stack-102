@@ -18,23 +18,23 @@ These steps assume you have already run `npx create-react-app music-app`.
    cd /workspaces/c2c-full-stack-102/lesson-02/music-app
    ```
 
-3. Start the dev server:
-
-   ```bash
-   npm start
-   ```
-
-4. In Codespaces, open the **Ports** tab and open port `3000` in the browser.
-
-## 2) Add Bootstrap
-
-From inside `lesson-02/music-app`, install Bootstrap + React Bootstrap:
+3. Install Bootstrap + React Bootstrap:
 
 ```bash
 npm install bootstrap react-bootstrap
 ```
 
-Then import Bootstrap CSS.
+4. Start the dev server:
+
+   ```bash
+   npm start
+   ```
+
+5. In Codespaces, open the **Ports** tab and open port `3000` in the browser.
+
+## 2) Add Bootstrap
+
+Import Bootstrap CSS.
 
 - Open `music-app/src/index.js`
 - Add this line near the top (above your app render):
