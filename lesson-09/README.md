@@ -36,7 +36,7 @@ Server:
 ```bash
 cd /workspaces/c2c-full-stack-102/lesson-09/app/server
 npm install
-npm start
+npm run devStart
 ```
 
 Client:
