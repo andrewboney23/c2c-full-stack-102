@@ -1,34 +1,75 @@
 # Lesson 13
 
+## Stopping Apps on Ports 3000 or 3001
+
+If you get an error that port 3000 or 3001 is already in use, you may have a previous app still running. To kill any app running on these ports, run the following commands in your terminal:
+
+```sh
+# For port 3000:
+lsof -ti:3000 | xargs kill -9
+# For port 3001:
+lsof -ti:3001 | xargs kill -9
+```
+
 ## Getting Started: Syncing and Environment Setup
 
 1. **Sync your fork with the upstream repository:**
    - Open a terminal in your Codespace or local IDE.
-   - Run:
+   - Make sure you are on the `main` branch:
+     ```sh
+     git checkout main
+     ```
+   - If you have uncommitted changes, stash them to avoid conflicts:
+     ```sh
+     git stash
+     ```
+   - Pull the latest changes from the upstream repository:
      ```sh
      git pull upstream main
      ```
-   - Resolve any merge conflicts if prompted.
 
-2. **Create `.env` files for the apps:**
-   - For the client app:
-     - Go to `lesson-13/app/client/` and create a file named `.env` with:
-       ```env
-       REACT_APP_API_BASE_URL=http://localhost:3001
-       ```
-   - For the server app:
-     - Go to `lesson-13/app/server/` and create a file named `.env` with:
-       ```env
-       # Environment configuration for the Express server
-       # update this file by providing your own database connection details (password and db_name).
-       DB_HOST=127.0.0.1
-       DB_USER=root
-       DB_PASSWORD=password
-       DB_NAME=ecommerce
-       PORT=3001
-       ```
+## Setup: Running Client and Server in Two Terminals
 
----
+You will need **two terminals** for this lesson: one for the client app and one for the server app.
+
+### Terminal 1: Client
+
+```sh
+cd /workspaces/c2c-full-stack-102/lesson-13/app/client
+
+# Create .env file:
+cat > .env <<'EOF'
+REACT_APP_API_BASE_URL=http://localhost:3001
+EOF
+
+# Install dependencies and start the client
+npm install
+npm start
+```
+
+This will launch the React app
+
+### Terminal 2: Server
+
+```sh
+cd /workspaces/c2c-full-stack-102/lesson-13/app/server
+
+# Create .env file (update DB_PASSWORD and DB_NAME as needed):
+cat > .env <<'EOF'
+# Environment configuration for the Express server
+DB_HOST=127.0.0.1
+DB_USER=root
+DB_PASSWORD=password
+DB_NAME=ecommerce
+PORT=3001
+EOF
+
+# Install dependencies and start the server
+npm install
+npm run dev
+```
+
+This will run the Express server with nodemon
 
 ## IDE Steps for Lesson 13: Adding Search Functionality
 
